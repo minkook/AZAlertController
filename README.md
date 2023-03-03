@@ -73,6 +73,18 @@ UIAlertController.az(message: "Test Alert", preferredStyle: .actionSheet)
     .show(self)
 ```
 
+
+5. Update Alert Config
+
+```swift
+struct CustomConfig: AZAlertConfig {
+    var defaultActionTitle: String { "확인" }
+    var cancelActionTitle: String { "취소" }
+}
+
+UIAlertController.az.config = CustomConfig()
+```
+
 ## Author
 
 minkook, manguks@gmail.com
