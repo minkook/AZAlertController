@@ -40,9 +40,33 @@ class ViewController: UIViewController {
     
     @objc
     func touchButtonAction(_ sender: UIButton) {
-        UIAlertController.az(message: "Test Alert")
+        
+        // 1.
+//        UIAlertController.az(message: "Test Alert")
+//            .show(self)
+        
+        // 2.
+//        UIAlertController.az(message: "Test Alert")
+//            .addCancelAction()
+//            .show(self)
+        
+        // 3.
+        UIAlertController.az(title: "Alert", message: "Test Alert")
             .addCancelAction()
+            .addCustomAction("확인") { _ in
+                print("확인!!")
+            }
             .show(self)
+        
+        // 4.
+//        UIAlertController.az(message: "Test Alert", preferredStyle: .actionSheet)
+//            .addCancelAction()
+//            .addCustomActions([
+//                .init(title: "aa") { _ in print("aa")},
+//                .init(title: "bb") { _ in print("bb")},
+//                .init(title: "cc") { _ in print("cc")}
+//            ])
+//            .show(self)
     }
 }
 
