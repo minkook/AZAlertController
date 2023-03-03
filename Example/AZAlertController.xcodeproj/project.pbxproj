@@ -31,7 +31,7 @@
 		04EDED6381A4EFC31D60D65F /* Pods-AZAlertController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AZAlertController_Tests.debug.xcconfig"; path = "Target Support Files/Pods-AZAlertController_Tests/Pods-AZAlertController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3917D8739A9F5B4A708BE44C /* Pods-AZAlertController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AZAlertController_Tests.release.xcconfig"; path = "Target Support Files/Pods-AZAlertController_Tests/Pods-AZAlertController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3A10F02CB9D930FBF45B060F /* Pods-AZAlertController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AZAlertController_Example.release.xcconfig"; path = "Target Support Files/Pods-AZAlertController_Example/Pods-AZAlertController_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5BEE563BBED92D87853E866F /* AZAlertController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = AZAlertController.podspec; path = ../AZAlertController.podspec; sourceTree = "<group>"; };
+		5BEE563BBED92D87853E866F /* AZAlertController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AZAlertController.podspec; path = ../AZAlertController.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* AZAlertController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AZAlertController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,8 +45,8 @@
 		6F189243A2BC0726AB47B9E6 /* Pods-AZAlertController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AZAlertController_Example.debug.xcconfig"; path = "Target Support Files/Pods-AZAlertController_Example/Pods-AZAlertController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		820BC115B5C0D2B55296099B /* Pods_AZAlertController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AZAlertController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F30302EF42C4755BEB6D223 /* Pods_AZAlertController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AZAlertController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2B39D3B7A8422C2C7F4FD67 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		B9FAF0C93ABECA3011DB3EEB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A2B39D3B7A8422C2C7F4FD67 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B9FAF0C93ABECA3011DB3EEB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,6 @@
 				04EDED6381A4EFC31D60D65F /* Pods-AZAlertController_Tests.debug.xcconfig */,
 				3917D8739A9F5B4A708BE44C /* Pods-AZAlertController_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -419,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -465,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
