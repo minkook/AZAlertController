@@ -22,13 +22,53 @@ pod 'AZAlertController'
 
 ## Usage
 
+1. Default Show Alert
+- If there is no value for the show function parameter,
+ it is automatically shown in the topmost view controller.
+
 ```swift
+UIAlertController.az(message: "Test Alert")
+    .show(self)
+```
+    or
+```swift    
+UIAlertController.az(message: "Test Alert")
+    .show()
+```
 
-1. Default Show Alert 
 
-        UIAlertController.az(message: "Test Alert")
-            .show(self)
+2. Default Show Cancel Alert
 
+```swift
+UIAlertController.az(message: "Test Alert")
+    .addCancelAction()
+    .show(self)
+```
+
+
+3. Custom Alert -- (Apply, Cancel) + Action Closure
+
+```swift
+UIAlertController.az(title: "Alert", message: "Test Alert")
+    .addCancelAction()
+    .addCustomAction("Apply") { _ in
+        print("touch apply~~")
+    }
+    .show(self)
+```
+
+
+4. Custom ActionSheet Style 
+
+```swift
+UIAlertController.az(message: "Test Alert", preferredStyle: .actionSheet)
+    .addCancelAction()
+    .addCustomActions([
+        .init(title: "aa") { _ in print("aa")},
+        .init(title: "bb") { _ in print("bb")},
+        .init(title: "cc") { _ in print("cc")}
+    ])
+    .show(self)
 ```
 
 ## Author

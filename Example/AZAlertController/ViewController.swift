@@ -53,8 +53,8 @@ class ViewController: UIViewController {
         // 3.
         UIAlertController.az(title: "Alert", message: "Test Alert")
             .addCancelAction()
-            .addCustomAction("확인") { _ in
-                print("확인!!")
+            .addCustomAction("Apply") { _ in
+                print("touch apply~~")
             }
             .show(self)
         
