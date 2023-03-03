@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  AZAlertController
 //
-//  Created by mkyoo on 03/03/2023.
-//  Copyright (c) 2023 mkyoo. All rights reserved.
+//  Created by minkook on 03/03/2023.
+//  Copyright (c) 2023 minkook. All rights reserved.
 //
 
 import UIKit
