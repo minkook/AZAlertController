@@ -9,14 +9,17 @@ import UIKit
 
 extension UIAlertController {
     
-    struct az {
+    public struct az {
+        
+        public static var config: AZAlertConfig = DefaultConfig()
+        
         private let alert: UIAlertController
         
-        init(title: String? = nil, message: String?, preferredStyle: UIAlertController.Style = .alert) {
+        public init(title: String? = nil, message: String?, preferredStyle: UIAlertController.Style = .alert) {
             alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
         }
         
-        func show(_ viewController: UIViewController? = nil) {
+        public func show(_ viewController: UIViewController? = nil) {
             if let vc = viewController {
                 _show(vc)
             } else {
@@ -25,37 +28,45 @@ extension UIAlertController {
             }
         }
         
-        func addDefaultAction(_ handler: ((UIAlertAction) -> Void)? = nil) -> Self {
-            _addAction("확인", style: .cancel, handler: handler)
+        public func addDefaultAction(_ handler: ((UIAlertAction) -> Void)? = nil) -> Self {
+            _addAction(az.config.defaultActionTitle, style: .cancel, handler: handler)
             return self
         }
         
-        func addCancelAction(_ title: String = "취소", handler: ((UIAlertAction) -> Void)? = nil) -> Self {
-            _addAction(title, style: .cancel, handler: handler)
+        public func addCancelAction(_ title: String = "", handler: ((UIAlertAction) -> Void)? = nil) -> Self {
+            let _title = title.isEmpty ? az.config.cancelActionTitle : title
+            _addAction(_title, style: .cancel, handler: handler)
             return self
         }
         
-        func addDestructiveAction(_ title: String, handler: ((UIAlertAction) -> Void)? = nil) -> Self {
+        public func addDestructiveAction(_ title: String, handler: ((UIAlertAction) -> Void)? = nil) -> Self {
             _addAction(title, style: .destructive, handler: handler)
             return self
         }
         
-        func addCustomAction(_ title: String, handler: ((UIAlertAction) -> Void)? = nil) -> Self {
+        public func addCustomAction(_ title: String, handler: ((UIAlertAction) -> Void)? = nil) -> Self {
             _addAction(title, style: .default, handler: handler)
             return self
         }
         
-        struct Action {
+        public struct Action {
             let title: String
             var handler: ((UIAlertAction) -> Void)? = nil
         }
         
-        func addCustomActions(_ actions: [Action]) -> Self {
+        public func addCustomActions(_ actions: [Action]) -> Self {
             actions.forEach { _addAction($0.title, style: .default, handler: $0.handler) }
             return self
         }
     }
 }
+
+
+public protocol AZAlertConfig {
+    var defaultActionTitle: String { get }
+    var cancelActionTitle: String { get }
+}
+
 
 // MARK: -
 fileprivate extension UIAlertController.az {
@@ -97,4 +108,12 @@ fileprivate extension UIAlertController.az {
             }
         }))
     }
+}
+
+
+
+
+private struct DefaultConfig: AZAlertConfig {
+    var defaultActionTitle: String { "Confirm" }
+    var cancelActionTitle: String { "Cancel" }
 }
