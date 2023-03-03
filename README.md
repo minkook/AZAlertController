@@ -23,18 +23,20 @@ pod 'AZAlertController'
 ## Usage
 
 1. Default Show Alert
-- If there is no value for the show function parameter,
- it is automatically shown in the topmost view controller.
 
 ```swift
 UIAlertController.az(message: "Test Alert")
     .show(self)
 ```
-    or
+
+or
+
 ```swift    
 UIAlertController.az(message: "Test Alert")
     .show()
 ```
+
+- If there is no value for the show function parameter, it is automatically shown in the topmost view controller.
 
 
 2. Default Show Cancel Alert
