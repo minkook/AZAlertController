@@ -20,6 +20,17 @@ it, simply add the following line to your Podfile:
 pod 'AZAlertController'
 ```
 
+## Usage
+
+```swift
+
+1. Default Show Alert 
+
+        UIAlertController.az(message: "Test Alert")
+            .show(self)
+
+```
+
 ## Author
 
 minkook, manguks@gmail.com
